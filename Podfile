@@ -8,7 +8,7 @@ target 'WebViewDataStore' do
   # Pods for WebViewDataStore
 
   pod 'SnapKit'
-  pod 'Alamofire'
+  pod 'Alamofire', "5.7.1"
   pod 'Kingfisher'
 
 
