@@ -6,17 +6,9 @@
 //
 
 import UIKit
-import WebKit
 
 class ViewController: UIViewController {
 
-    lazy var webView = {
-        let config = WKWebViewConfiguration()
-//        config.websiteDataStore = WKWebsiteDataStore.default()
-        let webView = WKWebView(frame: .zero, configuration: config)
-        webView.backgroundColor = .brown
-        return webView
-    }()
     
     private let alertView = BXProtocolAlertView()
     private var bottomView: BXCustomBottomView?
@@ -25,15 +17,30 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = .white
+        
+        let nowDate = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+//        formatter.timeStyle = .long
+//        formatter.timeZone = TimeZone(identifier: "Asia/Beijing")
+        let nowString = formatter.string(from: nowDate)
+        print("==== \(nowString)")
+        
+        let date1 = NSDate()
+        let now1 = formatter.string(from: date1 as Date)
+        print("===== \(now1)")
+        
+        let oneButton = UIButton(type: .custom)
+        oneButton.frame = CGRect(x: 0, y: 100, width: kScreenW, height: 45)
+        oneButton.setTitle("url 跳转", for: .normal)
+        oneButton.backgroundColor = .red
+        view.addSubview(oneButton)
+        oneButton.tag = 3
+        oneButton.addTarget(self, action: #selector(buttonSelectClick), for: .touchUpInside)
                 
-        view.addSubview(webView)
-        webView.frame = CGRect(origin: .zero, size: CGSize(width: kScreenW, height: 300))
-//        let urlRequest = URLRequest(url: URL(string: "https://www.baidu.com")!, cachePolicy: .returnCacheDataElseLoad)
-//        let urlRequest = URLRequest(url: URL(string: "https://wgt-sit.bxys.cc/#/")!, cachePolicy: .returnCacheDataElseLoad)
-//        webView.load(urlRequest)
         
         let btn = UIButton(type: .custom)
-        btn.frame = CGRect(x: 0, y: CGRectGetMaxY(webView.frame), width: 120, height: 40)
+        btn.frame = CGRect(x: 0, y: oneButton.bx_maxY, width: 120, height: 40)
         btn.setTitle("next controller", for: .normal)
         btn.setTitleColor(.red, for: .normal)
         view.addSubview(btn)
@@ -72,7 +79,6 @@ class ViewController: UIViewController {
     }
     
     @objc private func buttonClick() {
-        
         navigationController?.pushViewController(SwitchViewController(), animated: true)
     }
     
@@ -80,6 +86,13 @@ class ViewController: UIViewController {
         sender.isSelected = !sender.isSelected
         if sender.tag == 2 {
             BXProtocolAlertView.showAlertView(view: alertView)
+        } else if sender.tag == 3 {
+            // https://beian.miit.gov.cn/#/Integrated/index
+            // https://www.baidu.com
+            if let url = URL(string: "https://beian.miit.gov.cn/#/Integrated/index"),
+               UIApplication.shared.canOpenURL(url) {
+                UIApplication.shared.open(url)
+            }
         }
     }
     

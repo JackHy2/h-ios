@@ -2,7 +2,7 @@
 //  BXWebViewController.swift
 //  WebViewDataStore
 //
-//  Created by 漫qian-mac on 2024/11/15.
+//  Created by 漫qian-mac on 2024/12/2.
 //
 
 import UIKit
@@ -10,38 +10,46 @@ import WebKit
 
 class BXWebViewController: UIViewController {
 
+    lazy var webView = {
+        let config = WKWebViewConfiguration()
+//        config.websiteDataStore = WKWebsiteDataStore.default()
+        let webView = WKWebView(frame: .zero, configuration: config)
+        webView.backgroundColor = .brown
+        webView.navigationDelegate = self
+        webView.uiDelegate = self
+        return webView
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         view.backgroundColor = .white
-        
-        configUI()
-    }
-}
 
-extension BXWebViewController {
-    
-    private func configUI() {
-        let config = WKWebViewConfiguration()
-        let webView = WKWebView(frame: .zero, configuration: config)
         view.addSubview(webView)
-        webView.frame = CGRect(x: 0, y: kNaviBarH, width: kScreenW, height: kScreenH - kNaviBarH - kTabBarH)
-        webView.navigationDelegate = self
-        
-        let urlRequest = URLRequest(url: URL(string: protocolUrl)!)
+        webView.frame = CGRect(origin: .zero, size: CGSize(width: kScreenW, height: kScreenH - kNaviBarH - kTabBarH))
+//        let urlRequest = URLRequest(url: URL(string: "https://www.baidu.com")!, cachePolicy: .returnCacheDataElseLoad)
+        let urlRequest = URLRequest(url: URL(string: "https://wgt-sit.bxys.cc/#/")!, cachePolicy: .returnCacheDataElseLoad)
         webView.load(urlRequest)
     }
 }
 
-extension BXWebViewController: WKNavigationDelegate {
-    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        // 改变网页内容背景颜色
-//        webView.evaluateJavaScript("document.getElementsByTagName('body')[0].style.background='#ffffff'")
-        // 改变网页内容文字颜色
-//        webView.evaluateJavaScript("document.getElementsByTagName('body')[0].style.webkitTextFillColor= '#000'")
-        
-//        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5, execute: {
-//            webView.
-//        })
+extension BXWebViewController: WKNavigationDelegate, WKUIDelegate {
+    
+    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: (WKNavigationActionPolicy) -> Void) {
+       // let requestUrlStr = navigationAction.request.url?.absoluteString
+        //需要判断targetFrame是否为nil，如果为空则重新请求
+        if navigationAction.targetFrame == nil {
+            webView.load(navigationAction.request)
+            decisionHandler(.cancel)
+        } else {
+            decisionHandler(.allow)
+        }
     }
+    
+    func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
+        if (navigationAction.targetFrame == nil) {
+            webView.load(navigationAction.request)
+        }
+        return nil
+    }
+
 }

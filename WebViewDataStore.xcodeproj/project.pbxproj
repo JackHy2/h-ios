@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0F152D662CE6D11300301A37 /* BXWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F152D652CE6D11300301A37 /* BXWebViewController.swift */; };
+		0F152D662CE6D11300301A37 /* BXDataSaveController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F152D652CE6D11300301A37 /* BXDataSaveController.swift */; };
 		0F152D6F2CE711FA00301A37 /* BXCustomTextImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F152D6E2CE711FA00301A37 /* BXCustomTextImageView.swift */; };
 		0F33A6022CEAD56400200999 /* UserInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33A6012CEAD56400200999 /* UserInfoModel.swift */; };
 		0F33A6042CEAE1C200200999 /* TestOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33A6032CEAE1C200200999 /* TestOneViewController.swift */; };
@@ -16,6 +16,9 @@
 		0FB026D32CED6BF700EA3A69 /* BXCustomMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB026D22CED6BF700EA3A69 /* BXCustomMenuView.swift */; };
 		0FB026D52CED7D6D00EA3A69 /* BXCustomCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB026D42CED7D6D00EA3A69 /* BXCustomCircleView.swift */; };
 		0FB026D72CED7E3F00EA3A69 /* BXMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB026D62CED7E3F00EA3A69 /* BXMenuView.swift */; };
+		0FC28E5A2CFDE8A400EB9172 /* BXAlertMiddleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC28E592CFDE8A400EB9172 /* BXAlertMiddleView.swift */; };
+		0FC28E5C2CFDF5A300EB9172 /* BXUploadDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC28E5B2CFDF5A300EB9172 /* BXUploadDataController.swift */; };
+		0FC300BD2CFD61300039AE27 /* BXWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC300BC2CFD61300039AE27 /* BXWebViewController.swift */; };
 		0FCC47012CE4A08F0063A8F6 /* BXProtocolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCC47002CE4A08F0063A8F6 /* BXProtocolView.swift */; };
 		0FCC47032CE4A65A0063A8F6 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCC47022CE4A65A0063A8F6 /* UIView+Extension.swift */; };
 		0FD27CB82CE23D1B00188FA1 /* SwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD27CB72CE23D1B00188FA1 /* SwitchViewController.swift */; };
@@ -32,11 +35,12 @@
 		0FEE6EC72CE5DFE30022EEB4 /* MineTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEE6EC62CE5DFE30022EEB4 /* MineTableCell.swift */; };
 		0FEE6EC92CE5F1C60022EEB4 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEE6EC82CE5F1C60022EEB4 /* UIColor+Extension.swift */; };
 		0FEE6ECB2CE5F5620022EEB4 /* MineHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEE6ECA2CE5F5620022EEB4 /* MineHeaderView.swift */; };
+		0FF5635D2CF95B02000F9CE0 /* BXCustomSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF5635C2CF95B02000F9CE0 /* BXCustomSliderView.swift */; };
 		2AF85B51E8B39EF71EA4E860 /* Pods_WebViewDataStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E88D505E7F4ECC02A08A40D /* Pods_WebViewDataStore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0F152D652CE6D11300301A37 /* BXWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BXWebViewController.swift; sourceTree = "<group>"; };
+		0F152D652CE6D11300301A37 /* BXDataSaveController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BXDataSaveController.swift; sourceTree = "<group>"; };
 		0F152D6E2CE711FA00301A37 /* BXCustomTextImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BXCustomTextImageView.swift; sourceTree = "<group>"; };
 		0F33A6012CEAD56400200999 /* UserInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoModel.swift; sourceTree = "<group>"; };
 		0F33A6032CEAE1C200200999 /* TestOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestOneViewController.swift; sourceTree = "<group>"; };
@@ -45,6 +49,9 @@
 		0FB026D22CED6BF700EA3A69 /* BXCustomMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BXCustomMenuView.swift; sourceTree = "<group>"; };
 		0FB026D42CED7D6D00EA3A69 /* BXCustomCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BXCustomCircleView.swift; sourceTree = "<group>"; };
 		0FB026D62CED7E3F00EA3A69 /* BXMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BXMenuView.swift; sourceTree = "<group>"; };
+		0FC28E592CFDE8A400EB9172 /* BXAlertMiddleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BXAlertMiddleView.swift; sourceTree = "<group>"; };
+		0FC28E5B2CFDF5A300EB9172 /* BXUploadDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BXUploadDataController.swift; sourceTree = "<group>"; };
+		0FC300BC2CFD61300039AE27 /* BXWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BXWebViewController.swift; sourceTree = "<group>"; };
 		0FCC47002CE4A08F0063A8F6 /* BXProtocolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BXProtocolView.swift; sourceTree = "<group>"; };
 		0FCC47022CE4A65A0063A8F6 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		0FD27CB72CE23D1B00188FA1 /* SwitchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +70,7 @@
 		0FEE6EC62CE5DFE30022EEB4 /* MineTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineTableCell.swift; sourceTree = "<group>"; };
 		0FEE6EC82CE5F1C60022EEB4 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		0FEE6ECA2CE5F5620022EEB4 /* MineHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineHeaderView.swift; sourceTree = "<group>"; };
+		0FF5635C2CF95B02000F9CE0 /* BXCustomSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BXCustomSliderView.swift; sourceTree = "<group>"; };
 		62D098D21D4FD6EC612C0E43 /* Pods-WebViewDataStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebViewDataStore.debug.xcconfig"; path = "Target Support Files/Pods-WebViewDataStore/Pods-WebViewDataStore.debug.xcconfig"; sourceTree = "<group>"; };
 		9E88D505E7F4ECC02A08A40D /* Pods_WebViewDataStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WebViewDataStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE5BDA1676FFA2CFAB2110E7 /* Pods-WebViewDataStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebViewDataStore.release.xcconfig"; path = "Target Support Files/Pods-WebViewDataStore/Pods-WebViewDataStore.release.xcconfig"; sourceTree = "<group>"; };
@@ -99,6 +107,8 @@
 				0FB026D22CED6BF700EA3A69 /* BXCustomMenuView.swift */,
 				0FB026D62CED7E3F00EA3A69 /* BXMenuView.swift */,
 				0FB026D42CED7D6D00EA3A69 /* BXCustomCircleView.swift */,
+				0FF5635C2CF95B02000F9CE0 /* BXCustomSliderView.swift */,
+				0FC28E592CFDE8A400EB9172 /* BXAlertMiddleView.swift */,
 			);
 			path = tools;
 			sourceTree = "<group>";
@@ -127,6 +137,7 @@
 			children = (
 				0FD9FC102CEE2399000A7194 /* HomeDemoViewController.swift */,
 				0F7BBBC62CF32E1C005FAB54 /* HomeDemoTableViewCell.swift */,
+				0FC28E5B2CFDF5A300EB9172 /* BXUploadDataController.swift */,
 			);
 			path = home;
 			sourceTree = "<group>";
@@ -156,8 +167,9 @@
 				0FDA1CD52CDDB77F00EAF3D5 /* SceneDelegate.swift */,
 				0FDA1CD72CDDB77F00EAF3D5 /* ViewController.swift */,
 				0FD27CB72CE23D1B00188FA1 /* SwitchViewController.swift */,
-				0F152D652CE6D11300301A37 /* BXWebViewController.swift */,
+				0F152D652CE6D11300301A37 /* BXDataSaveController.swift */,
 				0F33A6032CEAE1C200200999 /* TestOneViewController.swift */,
+				0FC300BC2CFD61300039AE27 /* BXWebViewController.swift */,
 				0F7BBBC52CF32D0A005FAB54 /* home */,
 				0F152D642CE6D0E900301A37 /* mine */,
 				0F152D622CE6D0CE00301A37 /* tools */,
@@ -303,14 +315,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FC28E5A2CFDE8A400EB9172 /* BXAlertMiddleView.swift in Sources */,
 				0FEE6ECB2CE5F5620022EEB4 /* MineHeaderView.swift in Sources */,
 				0FCC47012CE4A08F0063A8F6 /* BXProtocolView.swift in Sources */,
 				0FB026D52CED7D6D00EA3A69 /* BXCustomCircleView.swift in Sources */,
+				0FC300BD2CFD61300039AE27 /* BXWebViewController.swift in Sources */,
 				0FCC47032CE4A65A0063A8F6 /* UIView+Extension.swift in Sources */,
 				0FEE6EC52CE5DA890022EEB4 /* MineViewController.swift in Sources */,
+				0FF5635D2CF95B02000F9CE0 /* BXCustomSliderView.swift in Sources */,
 				0FB026D72CED7E3F00EA3A69 /* BXMenuView.swift in Sources */,
 				0FEE6EC92CE5F1C60022EEB4 /* UIColor+Extension.swift in Sources */,
-				0F152D662CE6D11300301A37 /* BXWebViewController.swift in Sources */,
+				0F152D662CE6D11300301A37 /* BXDataSaveController.swift in Sources */,
 				0FEE6EC72CE5DFE30022EEB4 /* MineTableCell.swift in Sources */,
 				0F33A6042CEAE1C200200999 /* TestOneViewController.swift in Sources */,
 				0FDA1CD82CDDB77F00EAF3D5 /* ViewController.swift in Sources */,
@@ -324,6 +339,7 @@
 				0F152D6F2CE711FA00301A37 /* BXCustomTextImageView.swift in Sources */,
 				0FB026D32CED6BF700EA3A69 /* BXCustomMenuView.swift in Sources */,
 				0FDA1CD62CDDB77F00EAF3D5 /* SceneDelegate.swift in Sources */,
+				0FC28E5C2CFDF5A300EB9172 /* BXUploadDataController.swift in Sources */,
 				0FD9FC112CEE239A000A7194 /* HomeDemoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

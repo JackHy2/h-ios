@@ -73,14 +73,7 @@ class HomeDemoTableViewCell: UITableViewCell {
         backGrayView.frame = CGRect(x: 0, y: 122, width: bx_width, height: 8)
         
         
-        roundCornersSet(view: imageLabelBackView, corners: [.topRight, .bottomLeft], radius: 4)
+        imageLabelBackView.addCornerRadius(corners: [.topRight, .bottomLeft], radius: 4)
     }
 }
 
-
-func roundCornersSet(view: UIView, corners: UIRectCorner, radius: CGFloat) {
-    let shaperLayer = CAShapeLayer()
-    shaperLayer.frame = view.bounds
-    shaperLayer.path = UIBezierPath(roundedRect: view.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius)).cgPath
-    view.layer.mask = shaperLayer
-}

@@ -19,6 +19,9 @@ class HomeDemoViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.rowHeight = 130
+        if #available(iOS 15.0, *) {
+            tableView.sectionHeaderTopPadding = 0
+        }
         view.addSubview(tableView)
         tableView.register(HomeDemoTableViewCell.self, forCellReuseIdentifier: "HomeDemoCellID")
         

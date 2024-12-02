@@ -9,6 +9,8 @@ import UIKit
 
 class SwitchViewController: UIViewController {
     
+    private var alertView: BXAlertMiddleView?
+    
     private let UITableViewCellID = "UITableViewCellID"
     private lazy var tableView: UITableView = {
         let table = UITableView()
@@ -20,6 +22,8 @@ class SwitchViewController: UIViewController {
         super.viewDidLoad()
 
         view.backgroundColor = .white
+        
+        alertView = BXAlertMiddleView()
         
         let gradientView = GradientView()
         gradientView.frame = CGRect(x: 10, y: 120, width: 100, height: 30)
@@ -54,6 +58,9 @@ extension SwitchViewController: UITableViewDataSource, UITableViewDelegate {
             navigationController?.pushViewController(TestOneViewController(), animated: true)
         case 3:
             navigationController?.pushViewController(HomeDemoViewController(), animated: true)
+        case 4:
+            alertView?.buttonTapBlock = {tag in print("out in: \(tag)")}
+            alertView?.show()
         default: break
         }
     }
